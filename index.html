@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dance Picnic（ダンスピクニック）〜親子でダンスあそび〜 | 京都市左京区・参加費無料</title>
+<meta name="description" content="京都市左京区・下鴨で開催する参加費無料の親子ダンス&DJ体験会「Dance Picnic」。ダンス未経験OK！未就学児から大人・ご高齢の方まで、HIPHOPでみんなあそぼう。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#EC7333;
+    --teal:#2E7E8C;
+    --yellow:#F2B33D;
+    --green:#8CB63C;
+    --red:#E05A4E;
+    --cream:#FDF6EC;
+    --cream2:#FBEDD9;
+    --brown:#5B4636;
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:var(--brown);
+    background:var(--cream);
+    line-height:1.9;
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--teal);}
+
+  /* ===== 共通 ===== */
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+  section{padding:56px 0;}
+  .sec-title{
+    text-align:center;font-size:1.6rem;font-weight:900;color:var(--teal);
+    margin-bottom:32px;position:relative;
+  }
+  .sec-title span{
+    display:inline-block;padding:0 18px;position:relative;
+  }
+  .sec-title span::before,.sec-title span::after{
+    content:"♪";color:var(--yellow);font-size:1.1rem;position:relative;top:-6px;
+  }
+  .btn{
+    display:inline-block;background:var(--orange);color:#fff;font-weight:700;
+    padding:14px 42px;border-radius:999px;text-decoration:none;font-size:1.1rem;
+    box-shadow:0 4px 0 rgba(0,0,0,.12);transition:transform .15s;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn.teal{background:var(--teal);}
+
+  /* ===== ヘッダー / ヒーロー ===== */
+  header.hero{
+    background:var(--cream);
+    text-align:center;
+    padding:36px 20px 48px;
+    position:relative;
+    overflow:hidden;
+  }
+  .free-badge{
+    display:inline-block;background:var(--red);color:#fff;font-weight:700;
+    padding:6px 22px;border-radius:999px;font-size:1rem;margin-bottom:18px;
+  }
+  .bunting{width:min(560px,90%);margin:0 auto 4px;}
+  .logo-text{
+    font-family:"Baloo 2","Zen Maru Gothic",sans-serif;
+    font-size:clamp(3rem,10vw,5.2rem);
+    font-weight:800;line-height:1.05;letter-spacing:.02em;
+  }
+  /* ロゴ画像を使う場合は .logo-text と .logo-sub を削除して
+     <img src="logo.png" alt="Dance Picnic" style="max-width:520px;margin:0 auto"> に差し替え */
+  .logo-sub{
+    font-weight:700;font-size:clamp(1rem,3.4vw,1.35rem);margin-top:14px;color:var(--brown);
+  }
+  .logo-sub small{display:block;color:var(--teal);font-size:.85em;margin-top:2px;}
+  .catch{
+    margin-top:26px;font-size:clamp(1.05rem,3.2vw,1.3rem);font-weight:700;
+  }
+  .catch strong{color:var(--orange);}
+  .hero-cta{margin-top:28px;}
+
+  /* タグ */
+  .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px;}
+  .tag{
+    border:2px solid;border-radius:999px;padding:5px 18px;font-weight:700;font-size:.95rem;background:#fff;
+  }
+  .tag.green{border-color:var(--green);color:var(--green);}
+  .tag.blue{border-color:var(--teal);color:var(--teal);}
+  .tag.red{border-color:var(--red);color:var(--red);}
+  .tag.yellow{border-color:var(--yellow);color:#c98a17;}
+
+  /* ===== 開催日 ===== */
+  .schedule{background:var(--cream2);}
+  .date-cards{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
+  .date-card{
+    background:#fff;border-radius:20px;padding:28px 36px;text-align:center;
+    box-shadow:0 3px 10px rgba(91,70,54,.08);min-width:260px;flex:1;max-width:340px;
+    border-top:6px solid var(--orange);
+  }
+  .date-card:nth-child(2){border-top-color:var(--teal);}
+  .date-card .vol{color:var(--orange);font-weight:700;font-size:.9rem;}
+  .date-card .date{font-size:2rem;font-weight:900;color:var(--brown);line-height:1.3;}
+  .date-card .date .dow{font-size:1.1rem;color:#fff;background:var(--teal);border-radius:50%;
+    display:inline-block;width:34px;height:34px;line-height:34px;margin-left:6px;}
+  .date-card .time{
+    margin-top:10px;background:var(--cream2);border-radius:999px;font-weight:700;font-size:1.15rem;padding:4px 0;
+  }
+  .card-btn{margin-top:16px;font-size:1rem;padding:10px 30px;}
+  .note{text-align:center;margin-top:22px;font-size:.95rem;}
+
+  /* ===== 会場 ===== */
+  .venue-grid{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;}
+  .venue-info{flex:1;min-width:280px;}
+  .venue-info h3{color:var(--orange);font-size:1.35rem;margin-bottom:8px;}
+  .venue-info p{margin-bottom:6px;}
+  .venue-map{flex:1;min-width:280px;border-radius:16px;overflow:hidden;box-shadow:0 3px 10px rgba(91,70,54,.12);}
+  .venue-map iframe{width:100%;height:300px;border:0;display:block;}
+
+  /* ===== 内容 ===== */
+  .features{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:8px;}
+  .feature{
+    background:#fff;border-radius:20px;padding:26px 22px;text-align:center;flex:1;min-width:240px;max-width:300px;
+    box-shadow:0 3px 10px rgba(91,70,54,.08);
+  }
+  .feature .emoji{font-size:2.6rem;line-height:1;}
+  .feature h3{color:var(--teal);margin:12px 0 8px;font-size:1.15rem;}
+  .feature p{font-size:.95rem;}
+  .lead{text-align:center;max-width:640px;margin:0 auto 34px;font-weight:500;}
+
+  /* ===== 持ちもの ===== */
+  .items{background:var(--cream2);}
+  .item-list{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
+  .item{
+    background:#fff;border:2px dashed var(--orange);border-radius:16px;
+    padding:16px 30px;font-weight:700;font-size:1.05rem;
+  }
+
+  /* ===== 過去の様子 ===== */
+  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+  .photo-ph{
+    aspect-ratio:4/3;border-radius:16px;background:var(--cream2);
+    display:flex;align-items:center;justify-content:center;color:#b09a85;
+    font-size:.9rem;font-weight:700;border:2px dashed #d9c3a8;text-align:center;padding:10px;
+  }
+  .photo-slot img{display:none;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;}
+  .photo-slot.loaded img{display:block;}
+  .photo-slot.loaded .photo-ph{display:none;}
+
+  /* ===== 講師・主催 ===== */
+  .people{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
+  .person{
+    background:#fff;border-radius:20px;padding:26px 34px;text-align:center;min-width:260px;
+    box-shadow:0 3px 10px rgba(91,70,54,.08);
+  }
+  .person .role{color:#fff;background:var(--orange);border-radius:999px;padding:2px 18px;font-size:.85rem;font-weight:700;}
+  .person:nth-child(2) .role{background:var(--teal);}
+  .person h3{margin:12px 0 4px;font-size:1.25rem;}
+  .person p{font-size:.92rem;}
+
+  /* ===== 申込・お問い合わせ ===== */
+  .contact{background:var(--teal);color:#fff;text-align:center;}
+  .contact .sec-title{color:#fff;}
+  .contact p{margin-bottom:8px;}
+  .contact .btn{background:var(--yellow);color:var(--brown);font-size:1.1rem;}
+  .contact-btns{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:18px 0 30px;}
+  .sns a{color:#fff;font-weight:700;text-decoration:none;border-bottom:2px solid var(--yellow);}
+  .sns{display:flex;flex-wrap:wrap;gap:26px;justify-content:center;font-size:1.02rem;}
+
+  footer{
+    background:var(--brown);color:#f5e9dc;text-align:center;padding:26px 20px;font-size:.85rem;line-height:1.8;
+  }
+  footer .grant{color:var(--yellow);font-weight:700;}
+  footer .grant-logo{
+    max-width:160px;margin:0 auto 10px;background:#fff;border-radius:12px;padding:8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= ヒーロー ================= -->
+<header class="hero">
+  <div class="free-badge">参加費無料</div>
+
+  <!-- 旗と太陽（SVG装飾） -->
+  <svg class="bunting" viewBox="0 0 560 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M10 20 Q140 60 275 55" fill="none" stroke="#5B4636" stroke-width="3" stroke-linecap="round"/>
+    <path d="M285 55 Q420 60 550 20" fill="none" stroke="#5B4636" stroke-width="3" stroke-linecap="round"/>
+    <g>
+      <polygon points="55,32 75,36 60,55" fill="#EC7333"/>
+      <polygon points="105,42 125,44 112,64" fill="#8CB63C"/>
+      <polygon points="160,49 180,50 168,70" fill="#5BA8A0"/>
+      <polygon points="215,53 235,54 224,74" fill="#F2B33D"/>
+      <polygon points="330,54 350,52 341,73" fill="#EC7333"/>
+      <polygon points="385,50 405,48 395,69" fill="#5BA8A0"/>
+      <polygon points="437,44 457,41 448,62" fill="#8CB63C"/>
+      <polygon points="487,36 506,32 499,53" fill="#F2B33D"/>
+    </g>
+    <circle cx="280" cy="26" r="16" fill="#F2B33D"/>
+    <g stroke="#F2B33D" stroke-width="3" stroke-linecap="round">
+      <line x1="280" y1="0" x2="280" y2="6"/><line x1="259" y1="8" x2="263" y2="12"/>
+      <line x1="301" y1="8" x2="297" y2="12"/><line x1="255" y1="26" x2="261" y2="26"/>
+      <line x1="299" y1="26" x2="305" y2="26"/>
+    </g>
+  </svg>
+
+  <!-- ▼ ロゴ：logo.png を index.html と同じフォルダに置くだけで、自動的に画像ロゴに切り替わります -->
+  <img src="logo.png" alt="Dance Picnic 〜親子でダンスあそび〜 だれでもつながる♪ひろば"
+       style="max-width:480px;width:90%;margin:0 auto;display:none"
+       onload="this.style.display='block';document.getElementById('text-logo').style.display='none';document.getElementById('text-logo-sub').style.display='none';">
+  <h1 class="logo-text" id="text-logo">
+    <span style="color:var(--orange)">D</span><span style="color:var(--teal)">a</span><span style="color:var(--teal)">n</span><span style="color:var(--orange)">c</span><span style="color:var(--teal)">e</span><br>
+    <span style="color:var(--teal)">P</span><span style="color:var(--yellow)">i</span><span style="color:var(--orange)">c</span><span style="color:var(--teal)">n</span><span style="color:var(--orange)">i</span><span style="color:var(--teal)">c</span>
+  </h1>
+  <p class="logo-sub" id="text-logo-sub">〜 親子でダンスあそび 〜<small>だれでもつながる♪ひろば</small></p>
+
+  <p class="catch">ダンス未経験OK！ じっとしてなくてOK！<br><strong>HIPHOPで、親子であそぼう。</strong></p>
+
+  <div class="tags">
+    <span class="tag green">🌱 初心者向け</span>
+    <span class="tag blue">👨‍👧 親子連れOK</span>
+    <span class="tag red">🧒 未就学児〜大人</span>
+    <span class="tag yellow">🧡 ご高齢の方も歓迎</span>
+  </div>
+
+  <div class="hero-cta">
+    <a class="btn" href="#contact">かんたん1分！ 参加申込はこちら</a>
+  </div>
+</header>
+
+<!-- ================= 開催日 ================= -->
+<section class="schedule" id="schedule">
+  <div class="wrap">
+    <h2 class="sec-title"><span>次回の開催日</span></h2>
+    <div class="date-cards">
+      <!-- ▼ 開催日を増やすときは、この date-card ブロックをコピーして追加してください -->
+      <div class="date-card">
+        <div class="vol">Vol.07</div>
+        <div class="date">2026年 7月19日<span class="dow">日</span></div>
+        <div class="time">9:30 〜 11:30</div>
+        <a class="btn card-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdAIw1796-RfDja43-0BA_IOXaDm4QMIPD8FvQHvlnJmSpvLQ/viewform?usp=header" target="_blank" rel="noopener">この回に申し込む</a>
+      </div>
+      <div class="date-card">
+        <div class="vol">Vol.08</div>
+        <div class="date">2026年 8月8日<span class="dow" style="background:var(--orange)">土</span></div>
+        <div class="time">9:30 〜 11:30</div>
+        <a class="btn card-btn teal" href="https://docs.google.com/forms/d/e/1FAIpQLSep7FHcqFvVnaRmkDM_4AEfisAx8lSSep6n4ZTe90VCDFxJiQ/viewform?usp=header" target="_blank" rel="noopener">この回に申し込む</a>
+      </div>
+    </div>
+    <p class="note">毎月1回開催しています。お一人での参加も大歓迎です♪</p>
+  </div>
+</section>
+
+<!-- ================= 会場 ================= -->
+<section id="venue">
+  <div class="wrap">
+    <h2 class="sec-title"><span>会場</span></h2>
+    <div class="venue-grid">
+      <div class="venue-info">
+        <h3>下鴨自治会館かもりん<br>1F ふれあいホール</h3>
+        <p>〒606-0802<br>京都市左京区下鴨宮崎町4番地2</p>
+        <p>🚲 敷地内駐輪場あり</p>
+      </div>
+      <div class="venue-map">
+        <iframe src="https://maps.google.com/maps?q=%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E4%B8%8B%E9%B4%A8%E5%AE%AE%E5%B4%8E%E7%94%BA4%E7%95%AA%E5%9C%B02&z=16&output=embed"
+                loading="lazy" title="会場地図" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 内容 ================= -->
+<section style="background:var(--cream2)" id="about">
+  <div class="wrap">
+    <h2 class="sec-title"><span>どんなイベント？</span></h2>
+    <p class="lead">みんなで音楽に合わせて自由に体を動かしたり、かんたんなHIPHOPダンスあそびを楽しみます♪ 見学だけでもOKです。</p>
+    <div class="features">
+      <div class="feature">
+        <div class="emoji">🎧</div>
+        <h3>DJ体験、もちろんあります！</h3>
+        <p>本物のDJ機材にさわって、自分の好きな曲をかけてみよう。</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">👨‍👧‍👦</div>
+        <h3>親子でたのしく！</h3>
+        <p>未就学のお子さまから参加OK。親子で一緒に体を動かせます。</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🕺</div>
+        <h3>大人も一緒に！</h3>
+        <p>お一人でも、お友達同士でも。ご高齢の方もお気軽にどうぞ♪</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 持ちもの ================= -->
+<section class="items">
+  <div class="wrap" style="background:var(--cream);border-radius:24px;padding:36px 20px;">
+    <h2 class="sec-title"><span>持ちもの</span></h2>
+    <div class="item-list">
+      <div class="item">🥤 飲みもの</div>
+      <div class="item">👕 動きやすい服装</div>
+      <div class="item">👟 上履き（あれば）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 過去の様子 ================= -->
+<section id="photos">
+  <div class="wrap">
+    <h2 class="sec-title"><span>これまでの様子</span></h2>
+    <!-- ▼ photo1.jpg〜photo3.jpg を index.html と同じフォルダに置くと自動で表示されます -->
+    <div class="photos">
+      <div class="photo-slot">
+        <img src="photo1.jpg" alt="親子でダンスあそびの様子" onload="this.parentNode.classList.add('loaded')">
+        <div class="photo-ph">写真1（photo1.jpg）</div>
+      </div>
+      <div class="photo-slot">
+        <img src="photo2.jpg" alt="広いホールで自由にダンス" onload="this.parentNode.classList.add('loaded')">
+        <div class="photo-ph">写真2（photo2.jpg）</div>
+      </div>
+      <div class="photo-slot">
+        <img src="photo3.jpg" alt="DJ体験の様子" onload="this.parentNode.classList.add('loaded')">
+        <div class="photo-ph">写真3（photo3.jpg）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 講師・主催 ================= -->
+<section style="background:var(--cream2)">
+  <div class="wrap">
+    <h2 class="sec-title"><span>講師・主催</span></h2>
+    <div class="people">
+      <div class="person">
+        <span class="role">講師</span>
+        <h3>松野尾 涼子</h3>
+        <p>ダンス歴20年・講師歴11年</p>
+      </div>
+      <div class="person">
+        <span class="role">主催</span>
+        <h3>合同会社ワイヤーフレームズ</h3>
+        <p>京都市左京区を拠点に活動しています</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 申込・お問い合わせ ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="sec-title"><span>参加申込・お問い合わせ</span></h2>
+    <p>参加費は無料です。参加したい日を選んで、かんたん1分でお申込みください。</p>
+    <!-- ▼ 開催日が増えたら、ここにもボタンを追加してください -->
+    <div class="contact-btns">
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdAIw1796-RfDja43-0BA_IOXaDm4QMIPD8FvQHvlnJmSpvLQ/viewform?usp=header" target="_blank" rel="noopener">7月19日（日）に申し込む</a>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSep7FHcqFvVnaRmkDM_4AEfisAx8lSSep6n4ZTe90VCDFxJiQ/viewform?usp=header" target="_blank" rel="noopener">8月8日（土）に申し込む</a>
+    </div>
+    <div class="sns">
+      <span>📷 Instagram：<a href="https://www.instagram.com/cord.re26/" target="_blank" rel="noopener">@cord.re26</a></span>
+      <spa
